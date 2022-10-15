@@ -4,12 +4,31 @@
   <meta charset="UTF-8">
   <title>株式会社 LiNew</title>
   <link rel="stylesheet" type="text/css" href="base.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(function() {
+      $("header").addClass("fadein-bust01");//ヘッダーのフェードイン
+      $(".top p").addClass("fadein-bust02");//画像上テキストのフェードイン
+      $('.img-wrap img:nth-child(n+2)').hide();
+      setInterval(function() {
+        $(".img-wrap img:first-child").fadeOut(2000);
+        $(".img-wrap img:nth-child(2)").fadeIn(2000);
+        $(".img-wrap img:first-child").appendTo(".img-wrap");
+      }, 4000);
+    });
+    
+
+
+
+setInterval(changeImage,interval);
+    </script>
 </head>
 <body>
   <div class="top">
-    <header class="feadein-first">
+    <header class="fadein-farst fadein-build">
       <div class="wrap">
-        <img src="./image/logo_green-125x50.png" class="link">
+        <img src="./image/logo_green.png" class="link">
+        
         <nav class="nav">
           <ul>
             <li class="link">News</li>
@@ -24,11 +43,14 @@
     <div class="main-visual">
       <div class="img-wrap">
         <img src="./image/IMG_0258-1.jpeg">
+        <img src="./image/IMG_0224-1.jpeg">
+        <img src="./image/IMG_0218-4.jpeg">
+        <img src="./image/IMG_0242-1.jpeg">
       </div>
+      <p class="fadein-second fadein-text">
+        世の中の課題をITで解決し、<strong>関わった世界中の人たちを幸せにする</strong>
+      </p>
     </div>
   </div>
-  <p class="feadein-scloll">
-    世の中の課題をITで解決し、<strong>関わった世界中の人たちを幸せにする</strong>
-  </p>
 </body>
 </html>
