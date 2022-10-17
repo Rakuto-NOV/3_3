@@ -6,29 +6,38 @@
   <link rel="stylesheet" type="text/css" href="base.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
-    $(function() {
-      $("header").addClass("fadein-bust01");//ヘッダーのフェードイン
-      $(".top p").addClass("fadein-bust02");//画像上テキストのフェードイン
-      $('.img-wrap img:nth-child(n+2)').hide();
-      setInterval(function() {
-        $(".img-wrap img:first-child").fadeOut(2000);
-        $(".img-wrap img:nth-child(2)").fadeIn(2000);
-        $(".img-wrap img:first-child").appendTo(".img-wrap");
-      }, 4000);
-    });
-    
+      $(function() {
+        scroll ="0"
+        $("header").addClass("fadein-bust01");//ヘッダーのフェードイン
+        $(".top p").addClass("fadein-bust02");//画像上テキストのフェードイン
+        $('.img-wrap img:nth-child(n+2)').hide();
+        setInterval(function() {
+          $(".img-wrap img:first-child").fadeOut(2000);
+          $(".img-wrap img:nth-child(2)").fadeIn(2000);
+          $(".img-wrap img:first-child").appendTo(".img-wrap");
+        }, 4000);
+        $(window).scroll(function () {
+          $('.fadein-scroll').each(function(){
+            var elemPos = $(this).offset().top,
+              windowHeight = $(window).height();
+              scroll = $(window).scrollTop();
+              if (scroll > elemPos - windowHeight ) {
+                $(this).addClass('fadein-bust02');
+              }
+              if (scroll > elemPos + $(this).height() || scroll < elemPos - windowHeight) {
+                $(this).removeClass('fadein-bust02');
+              }
+          });
+        });
+      });
 
-
-
-setInterval(changeImage,interval);
     </script>
 </head>
 <body>
   <div class="top">
     <header class="fadein-farst fadein-build">
       <div class="wrap">
-        <img src="./image/logo_green.png" class="link">
-        
+        <img src="./image/logo_green.png" class="link">      
         <nav class="nav">
           <ul>
             <li class="link">News</li>
@@ -46,11 +55,28 @@ setInterval(changeImage,interval);
         <img src="./image/IMG_0224-1.jpeg">
         <img src="./image/IMG_0218-4.jpeg">
         <img src="./image/IMG_0242-1.jpeg">
+        <img src="./image/IMG_0256.jpeg">
       </div>
       <p class="fadein-second fadein-text">
         世の中の課題をITで解決し、<strong>関わった世界中の人たちを幸せにする</strong>
       </p>
     </div>
   </div>
+  <main>
+    <div class="service">
+      <h1 class="fadein-scroll fadein-build">
+        <span>Our Service</span>
+      </h1>
+    </div>
+    <div class="vision">
+    </div>
+    <div class="news">
+    </div>
+    <div class="about">
+    </div>
+    <div class="recruit">
+    </div>
+
+  </main>
 </body>
 </html>
