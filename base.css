@@ -124,7 +124,7 @@ color: #fce244;
 	padding: 100px;
 }
 
-h1 span {
+h1,span {
   border: 2px solid #2da690;
 	padding: 20px;
 	text-align: center; 

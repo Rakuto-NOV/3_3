@@ -6,8 +6,9 @@
   <link rel="stylesheet" type="text/css" href="base.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
+      "use strict";
+      let scroll ="0"
       $(function() {
-        scroll ="0"
         $("header").addClass("fadein-bust01");//ヘッダーのフェードイン
         $(".top p").addClass("fadein-bust02");//画像上テキストのフェードイン
         $('.img-wrap img:nth-child(n+2)').hide();
@@ -16,21 +17,23 @@
           $(".img-wrap img:nth-child(2)").fadeIn(2000);
           $(".img-wrap img:first-child").appendTo(".img-wrap");
         }, 4000);
+      });
+
+      $(function () {
         $(window).scroll(function () {
-          $('.fadein-scroll').each(function(){
-            var elemPos = $(this).offset().top,
-              windowHeight = $(window).height();
-              scroll = $(window).scrollTop();
-              if (scroll > elemPos - windowHeight ) {
-                $(this).addClass('fadein-bust02');
-              }
-              if (scroll > elemPos + $(this).height() || scroll < elemPos - windowHeight) {
-                $(this).removeClass('fadein-bust02');
-              }
+          const windowHeight = $(window).height();
+          scroll = $(window).scrollTop();
+          $('.fadein-scroll').each(function () {
+            const targetPosition = $(this).offset().top;
+            if (scroll > targetPosition - windowHeight ) {
+              $(this).addClass("fadein-bust01");
+            }
+            if (scroll > targetPosition + $(this).height() || scroll < targetPosition - windowHeight) {
+              $(this).removeClass('fadein-bust01');
+            }
           });
         });
       });
-
     </script>
 </head>
 <body>
