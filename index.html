@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>株式会社 LiNew</title>
   <link rel="stylesheet" type="text/css" href="base.css">
+  <!-- <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
       "use strict";
@@ -26,10 +28,10 @@
           $('.fadein-scroll').each(function () {
             const targetPosition = $(this).offset().top;
             if (scroll > targetPosition - windowHeight ) {
-              $(this).addClass("fadein-bust01");
+              $(this).addClass("fadein-bust02");
             }
             if (scroll > targetPosition + $(this).height() || scroll < targetPosition - windowHeight) {
-              $(this).removeClass('fadein-bust01');
+              $(this).removeClass('fadein-bust02');
             }
           });
         });
@@ -70,10 +72,171 @@
       <h1 class="fadein-scroll fadein-build">
         <span>Our Service</span>
       </h1>
+      <ul>
+        <li class="service-item-first">
+          <img src="./image/educure01.jpg" class="fadein-scroll fadein-destroy">
+          <a class="fadein-scroll fadein-destroy" >
+            <img src="./image/black.png">
+            <p class="catch">
+              DXを推進するエンジニア育成
+            </p>
+            <p class="sub">
+              IT事業参入をご検討中の事業者様向けのサービスです。
+            </p>
+            <i class="fa-solid fa-circle-arrow-square"></i>
+          </a>
+        </li>
+        <li class="service-item-second">
+          <img src="./image/techpassion01.jpg" class="fadein-scroll fadein-destroy">
+          <a class="fadein-scroll fadein-destroy" >
+            <img src="./image/logo.png">
+            <p class="catch">
+              未経験から本気でエンジニアへ
+            </p>
+            <p class="sub">
+              「未経験から本気でエンジニア」を目指すプログラミングスクールです。
+            </p>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </li>
+        <li class="service-item-third">
+          <img src="./image/6c40ac7b707e13491fda6a6b4f02d82d.jpg" class="fadein-scroll fadein-destroy">
+          <a class="fadein-scroll fadein-destroy" >
+            <img src="./image/abb886337b510d088a858a59a12bf114.png">
+            <p class="catch">
+              人生を変える英会話アプリ
+            </p>
+            <p class="sub">
+              登録者25万人!Youtube講師ジョージ監修!オンライン英会話アプリ!
+            </p>
+            <i class="fa-solid fa-circle-arrow-square"></i>
+          </a>
+        </li>
+      </ul>
+      <div class="wrap">
+        <a class="other fadein-scroll fadein-left">
+          Other service
+          <i class="fa-solid fa-circle-arrow-right"></i>
+        </a>
+      </div>
     </div>
     <div class="vision">
+      <div class="wrap">
+        <h1 class="fadein-scroll fadein-build">
+          <span>Our Vision</span>
+        </h1>
+        <h2 class="fadein-scroll fadein-destroy">
+          世の中の課題をITで解決して、
+          <br class="br-sp">
+          関わった
+          <strong>世界中の人たちを幸せにする</strong>
+        </h2>
+        <ul class="fadein-scroll fadein-destroy">
+          <li>
+            <p class="catch">
+              ITを通じて
+              <br class="br-sp">
+              人々の可能性を広げる
+            </p>
+            <p class="sub">イノベーションを起こし新たな価値を創造する</p>
+          </li>
+          <li>
+            <p class="catch">
+              世の中を代表する
+              <br class="br-sp">
+              自社サービスを作る
+            </p>
+            <p class="sub">世の中にインパクトを与える</p>
+          </li>
+          <li>
+            <p class="catch">
+              世界から選ばれる
+              <br class="br-sp">
+              企業へ
+            </p>
+            <p class="sub">常に最高のパフォーマンスを発揮します</p>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="news">
+      <div class="wrap">
+        <h1 class="fadein-scroll fadein-build">
+          <span>News</span>
+        </h1>
+        <ul>
+          <li class="fadein-scroll fadein-destroy">
+            <img src="./image/prtimes.png">
+            <div class="news-content">
+              <div class="news-meta">
+                <time>2022-06-03</time>
+                <a>プレリリース</a>
+                <a>メディア</a>
+                <a>自社サービス</a>
+              </div>
+              <div class="news-title">
+                <a>【プレリリース】ニーズが増大するAIや機械学習エンジニアの人材不足を解決</a>
+              </div>
+            </div>
+          </li>
+          <li class="fadein-scroll fadein-destroy">
+            <img src="./image/prtimes.png">
+            <div class="news-content">
+              <div class="news-meta">
+                <time>2022-06-03</time>
+                <a>プレリリース</a>
+                <a>メディア</a>
+                <a>自社サービス</a>
+              </div>
+              <div class="news-title">
+                <a>【プレリリース】完全オーダーメイド型英会話アプリ『RedFire』クラウドファンディングを始動</a>
+              </div>
+            </div>
+          </li>
+          <li class="fadein-scroll fadein-destroy">
+            <img src="./image/prtimes.png">
+            <div class="news-content">
+              <div class="news-meta">
+                <time>2022-06-03</time>
+                <a>プレリリース</a>
+                <a>メディア</a>
+                <a>自社サービス</a>
+              </div>
+              <div class="news-title">
+                <a>【プレリリース】ニーズが増大するAIや機械学習エンジニアの人材不足を解決</a>
+              </div>
+            </div>
+          </li>
+          <li class="fadein-scroll fadein-destroy">
+            <img src="./image/prtimes.png">
+            <div class="news-content">
+              <div class="news-meta">
+                <time>2022-06-03</time>
+                <a>プレリリース</a>
+                <a>メディア</a>
+                <a>自社サービス</a>
+              </div>
+              <div class="news-title">
+                <a>【プレリリース】ニーズが増大するAIや機械学習エンジニアの人材不足を解決</a>
+              </div>
+            </div>
+          </li>
+          <li class="fadein-scroll fadein-destroy">
+            <img src="./image/prtimes.png">
+            <div class="news-content">
+              <div class="news-meta">
+                <time>2022-06-03</time>
+                <a>プレリリース</a>
+                <a>メディア</a>
+                <a>自社サービス</a>
+              </div>
+              <div class="news-title">
+                <a>【プレリリース】ニーズが増大するAIや機械学習エンジニアの人材不足を解決</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="about">
     </div>
